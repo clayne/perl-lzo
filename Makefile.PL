@@ -15,6 +15,10 @@ use Config;
 
 #$LZO_LIB     = '-L/usr/local/lib';
 
+if ($^O eq 'freebsd') {
+    $LZO_INCLUDE = '-I/usr/local/include/lzo';
+    $LZO_LIB = '-L/usr/local/lib';
+}
 
 # It shouldn't be necessary to change anything from here on.
 
