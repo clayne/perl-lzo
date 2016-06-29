@@ -31,7 +31,7 @@
 
 package Compress::LZO;
 
-$VERSION = "1.08";
+$VERSION = "1.09";
 
 require 5.003_05;
 require Exporter;

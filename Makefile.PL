@@ -19,10 +19,16 @@ use Config;
 # It shouldn't be necessary to change anything from here on.
 
 WriteMakefile(
-                NAME   	 	=> 'Compress::LZO',
-		VERSION_FROM  	=> 'LZO.pm',
-		LIBS	 	=> [ "$LZO_LIB -llzo" ],
-	      	INC      	=> "$LZO_INCLUDE",
-		'dist'	 	=> {COMPRESS=>'gzip', SUFFIX=>'gz'},
-	     );
-
+    NAME   	 	=> 'Compress::LZO',
+    VERSION_FROM  	=> 'LZO.pm',
+    LIBS	 	=> [ "$LZO_LIB -llzo2" ],
+    LICENSE	=> 'GPL2',
+    INC      	=> "$LZO_INCLUDE",
+    'dist'	 	=> {COMPRESS=>'gzip', SUFFIX=>'gz'},
+    $^O =~/win/i ? (
+        dist => {
+            TAR      => 'ptar',
+            TARFLAGS => '-c -C -f',
+        },
+    ) : (),
+);

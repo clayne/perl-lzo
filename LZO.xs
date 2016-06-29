@@ -34,8 +34,8 @@
 #include "perl.h"
 #include "XSUB.h"
 
-#include <lzoconf.h>
-#include <lzo1x.h>
+#include <lzo/lzoconf.h>
+#include <lzo/lzo1x.h>
 
 #if !defined(LZO_VERSION) || (LZO_VERSION < 0x1070)
 #  error "Need LZO v1.07 or newer"
