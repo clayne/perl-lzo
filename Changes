@@ -2,6 +2,8 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
 
+1.09      2016-09-03 11:57:58+02:00 Europe/Vienna
+
     - Updated build procedure to work with current liblzo library versions
 
 1.08    2002-08-29 13:00:00+02:00 Europe/Vienna
